@@ -59,6 +59,10 @@
         <div class="perk" id="jakab"></div>
     </div>
 </div>
+<div class="footer">
+    Írta: Burgess Benedek<br>
+    Design: Turnyánszki Tamás
+</div>
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
