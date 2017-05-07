@@ -1,5 +1,5 @@
 <?php
-
+$version = "a0.2_1"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,11 +7,12 @@
 <head>
     <link rel="stylesheet" href="css/main.css"/>
     <title>Büntipont gyűjtő</title>
+    <meta name="description" content="Egy weboldal ahol büntipontokat lehet gyűjteni külömböző módszerek kihasználásával :)" />
 </head>
 
 <body>
 <h1>Büntipont gyűjtő fepoltal</h1>
-<h3>a0.2</h3>
+<h3><?= $version; ?></h3>
 
 <button id="sv_cookie">Mentés cookie-ba</button>
 <button id="ld_cookie">Betöltés cookie-bülndmfmnemrnnenebybewbxbhdbdbnxndm,x vdmsm d nm x c c d x cd
