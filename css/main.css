@@ -1,0 +1,106 @@
+.card{
+    width:442px;
+    height:338px;
+    background-image: url("../images/erintoff.png");
+    display:block;
+    margin:auto;
+    margin-top:10px;
+    cursor:pointer;
+}
+.card:active{
+    background-image: url("../images/erinton.png");
+}
+*{
+    font-family:Arial;
+}
+.points{
+    width:350px;
+    display:block;
+    background:rgba(0,0,0,0.3);
+    text-align:center;
+    font-size:26pt;
+    margin:auto;
+    margin-top:10px;
+}
+.persecond{
+    width:250px;
+    display:block;
+    background:rgba(0,0,0,0.26);
+    text-align:center;
+    font-size:20pt;
+    margin:auto;
+    margin-top:0px;
+}
+.sidebar{
+    position:fixed;
+    top:0px;
+    right:0px;
+    height:100%;
+    width:30%;
+    display:block;
+    font-size:16pt;
+}
+.buy_item{
+    float:right;
+    width:calc(80% - 11px);
+    display:inline-block;
+    padding:5px;
+}
+.buy_item:hover{
+    background-color:rgba(255,255,255,0.6) !important;
+    color:rgba(0,0,0,0.8) !important;
+    cursor:pointer;
+}
+.item_count{
+    float:right;
+    padding:5.5px;
+    display:inline-block;
+    text-align:center;
+    width:calc(20% - 10px);
+    background-color:rgba(0,0,0,0.4);
+}
+.images{
+    width:100%;
+}
+.images img{
+    height: 200px;
+    width:auto;
+    float:left;
+}
+
+.weed_img{
+    float:right;
+    width:30px;
+    height:30px;
+    display:block;
+}
+.button{
+    width:calc(50% - 11px);
+    padding:5px;
+    background:rgba(0,0,0,0.4);
+    float:right;
+    border-right:1px solid rgba(0,0,0,0.7);
+    cursor:pointer;
+}
+.button:hover{
+    background:rgba(0,0,0,0.2) !important;
+}
+.selected{
+    color:white;
+    background:rgba(0,0,0,0.7) !important;
+}
+.selected:hover {
+    color: black;
+}
+
+.perk{
+    float:right;
+    width:calc(100% - 10px);
+    display:inline-block;
+    padding:5px;
+    cursor:pointer;
+}
+.perk:hover{
+    background:rgba(255,255,255,0.6) !important;
+    color:rgba(0,0,0,0.8) !important;
+}
