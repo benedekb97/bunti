@@ -10,7 +10,10 @@ $version = "a0.4"
     <meta name="description" content="Egy weboldal ahol büntipontokat lehet gyűjteni külömböző módszerek kihasználásával :)" />
 </head>
 
-<body>
+<body style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+ unselectable="on"
+ onselectstart="return false;" 
+ onmousedown="return false;">
 <h1>Büntipont gyűjtő fepoltal</h1>
 <h3><?= $version; ?></h3>
 
