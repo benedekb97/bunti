@@ -2,33 +2,38 @@
     function Player() {
         var points = 0;
         var total_points = 0;
+
         this.getPoints = function () {
             return points;
-        }
+        };
+
         this.clickPoint = function () {
             var perk_multiplier = 1;
             for(var i = 0; i<perks.length; i++){
-                if(perks[i].isBought() == true){
+                if(perks[i].isBought()){
                     perk_multiplier *= perks[i].getMultiplier();
                 }
             }
             points = points + perk_multiplier;
             total_points = total_points + perk_multiplier;
-        }
+        };
+
         this.takePoints = function (points_to_take) {
             points = points - points_to_take;
-        }
+        };
         this.addPoints = function (points_to_add) {
             points = points + points_to_add;
             total_points = total_points + points_to_add;
-        }
+        };
+
         this.loadPoints = function (ld_points) {
             points = parseInt(ld_points);
             return true;
-        }
+        };
+
         this.getTotalPoints = function () {
             return total_points;
-        }
+        };
         this.loadTotalPoints = function (ld_total_points) {
             total_points = parseInt(ld_total_points);
             return true;
@@ -56,61 +61,58 @@
             } else {
                 return false;
             }
-        }
+        };
 
         this.loadPlayerHas = function (ld_player_has) {
             player_has = parseInt(ld_player_has);
             return true;
-        }
+        };
         this.loadCost = function (ld_cost) {
             cost = parseFloat(ld_cost);
             return true;
-        }
+        };
 
         this.getName = function () {
             return name;
-        }
+        };
         this.getCost = function () {
             return cost;
-        }
+        };
         this.getCount = function () {
             return player_has;
-        }
+        };
         this.getPps = function () {
             return pps;
-        }
+        };
         this.getBuyId = function () {
             return buy_id;
-        }
+        };
         this.getIconImg = function () {
             return icon_img;
-        }
+        };
         this.getGifId = function () {
             return gif_id;
-        }
+        };
         this.getProduction = function () {
-            return pps * player_has;
-        }
-
+            return this.getPps() * this.getPlayerHas();
+        };
         this.getUnlocksAt = function() {
             return unlocks_at;
-        }
+        };
+        this.getPlayerHas = function () {
+            return player_has;
+        };
 
         this.canBuy = function () {
-            if (default_player.getPoints() >= cost) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+            return default_player.getPoints() >= cost;
+        };
 
         this.setPps = function (new_pps) {
             pps = new_pps;
-        }
-
+        };
         this.setName = function (new_name) {
             name = new_name;
-        }
+        };
     }
 
     function Menu(new_name, new_selected, new_html_id) {
@@ -120,23 +122,24 @@
 
         this.getName = function () {
             return name;
-        }
+        };
         this.isSelected = function () {
             return selected;
-        }
+        };
         this.getHtmlId = function () {
             return html_id;
-        }
+        };
+
         this.select = function () {
-            if (this.isSelected() == false) {
+            if (!this.isSelected()) {
                 selected = true;
             }
-        }
+        };
         this.deselect = function () {
-            if (this.isSelected() == true) {
+            if (this.isSelected()) {
                 selected = false;
             }
-        }
+        };
     }
 
     function Perk(new_unlocks_at, new_name, new_cost, new_multiplier, new_html_id) {
@@ -146,50 +149,47 @@
         var multiplier = new_multiplier;
         var player_has = false;
         var html_id = new_html_id;
+
         this.getUnlocksAt = function () {
             return unlocks_at;
-        }
+        };
         this.getHtmlId = function () {
             return html_id;
-        }
+        };
         this.getName = function () {
             return name;
-        }
+        };
         this.getCost = function () {
             return cost;
-        }
+        };
         this.getMultiplier = function () {
             return multiplier;
-        }
+        };
         this.isBought = function () {
             return player_has;
-        }
+        };
+
         this.canBuy = function () {
-            if (default_player.getTotalPoints() >= this.getUnlocksAt() && default_player.getPoints() >= this.getCost()) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+            return default_player.getTotalPoints() >= this.getUnlocksAt() && default_player.getPoints() >= this.getCost();
+        };
+
         this.isUnlocked = function () {
-            if(default_player.getTotalPoints() >= this.getUnlocksAt()){
-                return true;
-            }else{
-                return false;
-            }
-        }
+            return default_player.getTotalPoints() >= this.getUnlocksAt();
+        };
+
         this.buy = function () {
-            if (this.canBuy() == true) {
+            if (this.canBuy()) {
                 player_has = true;
                 default_player.takePoints(this.getCost());
                 return true;
             } else {
                 return false;
             }
-        }
+        };
+
         this.loadBought = function(is_bought){
             player_has = is_bought;
-        }
+        };
     }
 
     function Upgrade(new_name, new_unlocks_at, new_cost, new_html_id, new_upgrades_id, new_pps, new_auto_name){
@@ -204,42 +204,30 @@
 
         this.getName = function(){
             return name;
-        }
-
+        };
         this.getUnlocksAt = function(){
             return unlocks_at;
-        }
-
+        };
         this.getCost = function(){
             return cost;
-        }
-
+        };
         this.getHtmlId = function(){
             return html_id;
-        }
-
+        };
         this.isBought = function(){
             return is_bought;
-        }
+        };
 
         this.canBuy = function(){
-            if (default_player.getTotalPoints() >= this.getUnlocksAt() && default_player.getPoints() >= this.getCost()) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+            return default_player.getTotalPoints() >= this.getUnlocksAt() && default_player.getPoints() >= this.getCost();
+        };
 
         this.isUnlocked = function(){
-            if(default_player.getTotalPoints() >= this.getUnlocksAt()){
-                return true;
-            }else{
-                return false;
-            }
-        }
+            return default_player.getTotalPoints() >= this.getUnlocksAt();
+        };
 
         this.buy = function(){
-            if (this.canBuy() == true) {
+            if (this.canBuy()) {
                 is_bought = true;
                 default_player.takePoints(this.getCost());
                 autos[upgrades_id].setPps(upgrades_pps);
@@ -248,11 +236,11 @@
             } else {
                 return false;
             }
-        }
+        };
 
         this.loadBought = function(new_is_bought){
             is_bought = new_is_bought;
-        }
+        };
     }
 
 //Save functions
@@ -267,9 +255,11 @@
         for (var i = 0; i < upgrades.length; i++){
             s_data += "+" + upgrades[i].isBought();
         }
+
         // player_points+foodcount+foodcost+gondnok+weed+toilet+perks+upgrades
         alert(btoa(s_data.rot13()).rot13());
     }
+
     function saveDataToCookie() {
         var s_data = Math.round(default_player.getPoints()) + "+" + Math.round(default_player.getTotalPoints());
         for (var i = 0; i < autos.length; i++) {
@@ -281,7 +271,9 @@
         for (var i = 0; i < upgrades.length; i++){
             s_data += "+" + upgrades[i].isBought();
         }
+
         document.cookie = "data=" + btoa(s_data.rot13()).rot13();
+
         alert("Sikeres!");
     }
 
@@ -291,47 +283,52 @@
         var ld_data = "";
         var equals = false;
         for (var i = 0; i < ld_cookie.length; i++) {
-            if (ld_cookie[i] == ";") {
+            if (ld_cookie[i] === ";") {
                 break;
             }
             if (equals) {
                 ld_data += ld_cookie[i];
             }
-            if (ld_cookie[i] == "=") {
+            if (ld_cookie[i] === "=") {
                 equals = true;
             }
         }
-        if (ld_data == "") {
+        if (ld_data === "") {
             return;
         }
 
         ld_data = atob(ld_data.rot13()).rot13();
         var ld_res = ld_data.split('+');
+
         default_player.loadPoints(ld_res[0]);
         default_player.loadTotalPoints(ld_res[1]);
+
         for (var i = 0; i < autos.length; i++) {
             autos[i].loadPlayerHas(ld_res[i * 2 + 2]);
             autos[i].loadCost(ld_res[i * 2 + 3]);
         }
         for (var i = 0; i < perks.length; i++){
-            perks[i].loadBought(ld_res[i + 2 + autos.length*2] == "true");
+            perks[i].loadBought(ld_res[i + 2 + autos.length*2] === "true");
         }
         for (var i = 0; i < upgrades.length; i++){
-            upgrades[i].loadBought(ld_res[i + 2 + autos.length + upgrades.length*2] == "true");
+            upgrades[i].loadBought(ld_res[i + 2 + autos.length + upgrades.length*2] === "true");
         }
         alert("Sikeres (text by Koza)");
     }
     function loadFromInput(b64str) {
         var ld_data = atob(b64str.rot13()).rot13();
         var ld_res = ld_data.split('+');
+
         default_player.loadPoints(ld_res[0]);
         default_player.loadTotalPoints(ld_res[1]);
+
         for (var i = 0; i < autos.length; i++) {
             autos[i].loadPlayerHas(ld_res[i * 2 + 2]);
             autos[i].loadCost(ld_res[i * 2 + 3]);
         }
+
         for (var i = 0; i < perks.length; i++){
-            perks[i].loadBought(ld_res[i + 2 + autos.length*2] == "true");
+            perks[i].loadBought(ld_res[i + 2 + autos.length*2] === "true");
         }
     }
 
@@ -358,11 +355,13 @@
             ["food_gif", "gondnok_gif", "weed_gif", "toilet_gif", "teacher_gif", "vomit_gif", "trash.png"], // gif tag id
             [0, 100, 1000, 6000, 50000, 1000001, 11875000] // unlocks at total points
         ];
+
         var menu_data = [
             ["Szarok", true, "autos"],
             ["Perkek", false, "perks"],
             ["Fejlesztések", false, "upgrades"]
         ];
+
         var perk_data = [
             // unlocks at total points, name, cost, multiplier, id
             [500, "Törött kártya", 750, 4, "broken"],
@@ -372,6 +371,7 @@
             [100000, "Kakas dolgozói", 150000, 10, "kakas"],
             [500000, "Jakab Zoltán", 750000, 20, "jakab"]
         ];
+
         var upgrades_data = [
             // name, unlocks_at, cost, html tag id, auto id, new pps for auto
             ["Narancs helyett pomelo", 100, 240, "pomelo", 0, 0.5, "Pomelo"],
@@ -439,150 +439,39 @@
 
         //Buy button click checkers
         {
-            $('#buy_bad_food').click(function () {
-                autos[0].buy();
+            autos.forEach(function (auto) {
+                $("#" + auto.getBuyId()).click(function () {
+                    auto.buy();
+                })
             });
 
-            $('#buy_gondnok').click(function () {
-                autos[1].buy();
+            perks.forEach(function (perk) {
+                $('#' + perk.getHtmlId()).click(function () {
+                    perk.buy();
+                })
             });
 
-            $('#buy_weed').click(function () {
-                autos[2].buy();
+            upgrades.forEach(function (upgrade) {
+                $('#' + upgrade.getHtmlId()).click(function () {
+                    upgrade.buy();
+                })
             });
-
-            $('#buy_toilet').click(function () {
-                autos[3].buy();
-            });
-
-            $('#buy_teacher').click(function () {
-                autos[4].buy();
-            });
-
-            $('#buy_vomit').click(function () {
-                autos[5].buy();
-            })
-
-            $('#buy_trash').click(function () {
-                autos[6].buy();
-            })
-
-            $('#broken').click(function(){
-                if(perks[0].isBought()==false){
-                    perks[0].buy();
-                }
-            })
-
-            $('#night').click(function(){
-                if(perks[1].isBought()==false){
-                    perks[1].buy();
-                }
-            })
-
-            $('#blocked').click(function(){
-                if(perks[2].isBought()==false){
-                    perks[2].buy();
-                }
-            })
-
-            $('#found').click(function(){
-                if(perks[3].isBought()==false){
-                    perks[3].buy();
-                }
-            })
-
-            $('#kakas').click(function(){
-                if(perks[4].isBought()==false){
-                    perks[4].buy();
-                }
-            })
-
-            $('#jakab').click(function(){
-                if(perks[5].isBought()==false){
-                    perks[5].buy();
-                }
-            })
-
-            $('#pomelo').click(function(){
-                if(upgrades[0].isBought() == false){
-                    upgrades[0].buy();
-                }
-            })
-
-            $('#cake').click(function(){
-                if(upgrades[1].isBought() == false){
-                    upgrades[1].buy();
-                }
-            })
-
-            $('#magdi').click(function(){
-                if(upgrades[2].isBought() == false){
-                    upgrades[2].buy();
-                }
-            })
-
-            $('#janitor').click(function(){
-                if(upgrades[3].isBought() == false){
-                    upgrades[3].buy();
-                }
-            })
-            $('#pipa').click(function(){
-                if(upgrades[4].isBought() == false){
-                    upgrades[4].buy();
-                }
-            })
-            $('#lyuk').click(function(){
-                if(upgrades[5].isBought() == false){
-                    upgrades[5].buy();
-                }
-            })
-            $('#konyv').click(function(){
-                if(upgrades[6].isBought() == false){
-                    upgrades[6].buy();
-                }
-            })
-            $('#kb').click(function(){
-                if(upgrades[7].isBought() == false){
-                    upgrades[7].buy();
-                }
-            })
-            $('#trash').click(function(){
-                if(upgrades[8].isBought() == false){
-                    upgrades[8].buy();
-                }
-            })
-            $('#lift').click(function(){
-                if(upgrades[9].isBought() == false){
-                    upgrades[9].buy();
-                }
-            })
         }
-
         //Menu selector checkers
         {
-            $('#autos_button').click(function () {
-                if (menus[0].isSelected() == false) {
-                    menus[1].deselect();
-                    menus[2].deselect();
-                    menus[0].select();
-                }
+            menus.forEach(function(menu) {
+                $('#' + menu.getHtmlId() + "_button").click(function() {
+                    if(menu.isSelected() === false) {
+                        menus.forEach(function(menu2){
+                            if(menu2.getName() !== menu.getName()) {
+                                menu2.deselect();
+                            } else {
+                                menu.select();
+                            }
+                        });
+                    }
+                });
             });
-
-            $('#perks_button').click(function () {
-                if (menus[1].isSelected() == false) {
-                    menus[0].deselect();
-                    menus[2].deselect();
-                    menus[1].select();
-                }
-            });
-
-            $('#upgrades_button').click(function (){
-                if(menus[2].isSelected() == false) {
-                    menus[0].deselect();
-                    menus[1].deselect();
-                    menus[2].select();
-                }
-            })
         }
 
         setInterval(function () {
@@ -590,7 +479,7 @@
 
             for (var i = 0; i < autos.length; i++) {
                 var selector = "#" + autos[i].getBuyId();
-                if (autos[i].canBuy() == true) {
+                if (autos[i].canBuy()) {
                     $(selector).css("background", "rgba(0,0,0,0.3)");
                     $(selector).css("color", "rgba(0,0,0,1)");
                 } else {
@@ -602,7 +491,7 @@
                 }else{
                     $(selector).html("<img src='images/filler.png' height='20' width='20'> ??? - ???");
                 }
-                if (autos[i].getCount() != 0) {
+                if (autos[i].getCount() !== 0) {
                     $("#" + autos[i].getGifId()).css('display', 'block');
                 } else {
                     $("#" + autos[i].getGifId()).css('display', 'none');
@@ -612,26 +501,27 @@
             }
             for (var i = 0; i < perks.length; i++){
                 var selector = "#" + perks[i].getHtmlId();
-                if(perks[i].isBought() == true){
+                if(perks[i].isBought()){
                     $(selector).css("background","rgba(0,0,0,0.7");
                     $(selector).css("color","rgba(255,255,255,1");
-                }else if(perks[i].canBuy() == true){
+                }else if(perks[i].canBuy()){
                     $(selector).css("background","rgba(0,0,0,0.3");
                     $(selector).css("color","rgba(0,0,0,1");
                 }else{
                     $(selector).css("background", "rgba(0,0,0,0.1)");
                     $(selector).css("color", "rgba(0,0,0,0.5)");
                 }
-                if(perks[i].canBuy() == true){
+                if(perks[i].canBuy()){
                     $('#' + perks[i].getHtmlId()).html(perks[i].getName() + " - " + perks[i].getCost());
-                }else if(perks[i].isUnlocked() == true){
+                }else if(perks[i].isUnlocked()){
                     $('#' + perks[i].getHtmlId()).html(perks[i].getName() + " - ???");
                 }else{
                     $('#' + perks[i].getHtmlId()).html("??? - ???");
                 }
             }
+
             for (var i = 0; i < menus.length; i++) {
-                if (menus[i].isSelected() == true) {
+                if (menus[i].isSelected()) {
                     $('#' + menus[i].getHtmlId() + "_button").addClass("selected");
                     $('#' + menus[i].getHtmlId()).css("display", "block");
                 } else {
@@ -641,17 +531,17 @@
             }
             for(var i = 0; i<upgrades.length; i++){
                 var selector = "#" + upgrades[i].getHtmlId();
-                if(upgrades[i].isBought() == true){
+                if(upgrades[i].isBought()){
                     $(selector).css("background","rgba(0,0,0,0.7");
                     $(selector).css("color","rgba(255,255,255,1");
-                }else if(upgrades[i].canBuy() == true){
+                }else if(upgrades[i].canBuy()){
                     $(selector).css("background","rgba(0,0,0,0.3");
                     $(selector).css("color","rgba(0,0,0,1");
                 }else{
                     $(selector).css("background", "rgba(0,0,0,0.1)");
                     $(selector).css("color", "rgba(0,0,0,0.5)");
                 }
-                if(upgrades[i].canBuy() == true){
+                if(upgrades[i].canBuy()){
                     $(selector).css("display","block");
                     $(selector).html(upgrades[i].getName() + " - " + upgrades[i].getCost());
                 }else{
@@ -663,6 +553,7 @@
             }
 
             $('#points').html(Math.round(default_player.getPoints()));
+
             $('#persecond').html(Math.round(points_to_add));
 
             default_player.addPoints(points_to_add / 30);
