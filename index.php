@@ -1,5 +1,5 @@
 <?php
-$version = "a0.2_1"
+$version = "a0.4"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +34,7 @@ $version = "a0.2_1"
     <div class="buttons">
         <div class="button" id="autos_button"></div>
         <div class="button" id="perks_button"></div>
+        <div class="button" id="upgrades_button"></div>
     </div>
     <div id="autos">
         <div class="item_count" id="buy_bad_food_count"></div>
@@ -50,6 +51,12 @@ $version = "a0.2_1"
 
         <div class="item_count" id="buy_teacher_count"></div>
         <div class="buy_item" id="buy_teacher"></div>
+
+        <div class="item_count" id="buy_vomit_count"></div>
+        <div class="buy_item" id="buy_vomit"></div>
+
+        <div class="item_count" id="buy_trash_count"></div>
+        <div class="buy_item" id="buy_trash"></div>
     </div>
     <div id="perks">
         <div class="perk" id="broken"></div>
@@ -58,6 +65,8 @@ $version = "a0.2_1"
         <div class="perk" id="found"></div>
         <div class="perk" id="kakas"></div>
         <div class="perk" id="jakab"></div>
+    </div>
+    <div id="upgrades">
     </div>
 </div>
 <div class="footer">

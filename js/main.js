@@ -1,1 +1,601 @@
-var _0xbe99=["\x63\x61\x6C\x6C","\x67\x65\x74\x50\x6F\x69\x6E\x74\x73","\x63\x6C\x69\x63\x6B\x50\x6F\x69\x6E\x74","\x6C\x65\x6E\x67\x74\x68","\x69\x73\x42\x6F\x75\x67\x68\x74","\x67\x65\x74\x4D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72","\x74\x61\x6B\x65\x50\x6F\x69\x6E\x74\x73","\x61\x64\x64\x50\x6F\x69\x6E\x74\x73","\x6C\x6F\x61\x64\x50\x6F\x69\x6E\x74\x73","\x67\x65\x74\x54\x6F\x74\x61\x6C\x50\x6F\x69\x6E\x74\x73","\x6C\x6F\x61\x64\x54\x6F\x74\x61\x6C\x50\x6F\x69\x6E\x74\x73","\x62\x75\x79","\x6C\x6F\x61\x64\x50\x6C\x61\x79\x65\x72\x48\x61\x73","\x6C\x6F\x61\x64\x43\x6F\x73\x74","\x67\x65\x74\x4E\x61\x6D\x65","\x67\x65\x74\x43\x6F\x73\x74","\x67\x65\x74\x43\x6F\x75\x6E\x74","\x67\x65\x74\x50\x70\x73","\x67\x65\x74\x42\x75\x79\x49\x64","\x67\x65\x74\x49\x63\x6F\x6E\x49\x6D\x67","\x67\x65\x74\x47\x69\x66\x49\x64","\x67\x65\x74\x50\x72\x6F\x64\x75\x63\x74\x69\x6F\x6E","\x63\x61\x6E\x42\x75\x79","\x69\x73\x53\x65\x6C\x65\x63\x74\x65\x64","\x67\x65\x74\x48\x74\x6D\x6C\x49\x64","\x73\x65\x6C\x65\x63\x74","\x64\x65\x73\x65\x6C\x65\x63\x74","\x67\x65\x74\x55\x6E\x6C\x6F\x63\x6B\x73\x41\x74","\x69\x73\x55\x6E\x6C\x6F\x63\x6B\x65\x64","\x6C\x6F\x61\x64\x42\x6F\x75\x67\x68\x74","\x72\x6F\x75\x6E\x64","\x2B","\x72\x6F\x74\x31\x33","\x63\x6F\x6F\x6B\x69\x65","\x64\x61\x74\x61\x3D","\x53\x69\x6B\x65\x72\x65\x73\x21","","\x3B","\x3D","\x73\x70\x6C\x69\x74","\x74\x72\x75\x65","\x53\x69\x6B\x65\x72\x65\x73\x20\x28\x74\x65\x78\x74\x20\x62\x79\x20\x4B\x6F\x7A\x61\x29","\x4E\x61\x72\x61\x6E\x63\x73","\x47\x6F\x6E\x64\x6E\x6F\x6B","\x46\xFC\x76\x65\x7A\xE9\x73","\x4A\x65\x67\x79\x7A\x65\x74\x20\xE9\x67\x65\x74\xE9\x73","\x4E\x65\x76\x65\x6C\u0151\x74\x61\x6E\xE1\x72","\x62\x75\x79\x5F\x62\x61\x64\x5F\x66\x6F\x6F\x64","\x62\x75\x79\x5F\x67\x6F\x6E\x64\x6E\x6F\x6B","\x62\x75\x79\x5F\x77\x65\x65\x64","\x62\x75\x79\x5F\x74\x6F\x69\x6C\x65\x74","\x62\x75\x79\x5F\x74\x65\x61\x63\x68\x65\x72","\x69\x6D\x61\x67\x65\x73\x2F\x6E\x61\x72\x61\x6E\x63\x61\x2E\x70\x6E\x67","\x69\x6D\x61\x67\x65\x73\x2F\x67\x6F\x6E\x64\x6E\x6F\x6B\x2E\x70\x6E\x67","\x69\x6D\x61\x67\x65\x73\x2F\x77\x65\x65\x64\x2D\x68\x69\x2E\x70\x6E\x67","\x69\x6D\x61\x67\x65\x73\x2F\x6A\x65\x67\x79\x7A\x65\x74\x2E\x70\x6E\x67","\x69\x6D\x61\x67\x65\x73\x2F\x66\x69\x6C\x6C\x65\x72\x2E\x70\x6E\x67","\x66\x6F\x6F\x64\x5F\x67\x69\x66","\x67\x6F\x6E\x64\x6E\x6F\x6B\x5F\x67\x69\x66","\x77\x65\x65\x64\x5F\x67\x69\x66","\x74\x6F\x69\x6C\x65\x74\x5F\x67\x69\x66","\x74\x65\x61\x63\x68\x65\x72\x5F\x67\x69\x66","\x53\x7A\x61\x72\x6F\x6B","\x61\x75\x74\x6F\x73","\x50\x65\x72\x6B\x65\x6B","\x70\x65\x72\x6B\x73","\x54\xF6\x72\xF6\x74\x74\x20\x6B\xE1\x72\x74\x79\x61","\x62\x72\x6F\x6B\x65\x6E","\x4C\x65\x6A\xE1\x72\x74\x20\xE9\x6A\x73\x7A\x61\x6B\x61\x69\x20\x6B\xE1\x72\x74\x79\x61","\x6E\x69\x67\x68\x74","\x4C\x65\x74\x69\x6C\x74\x6F\x74\x74\x20\x6B\xE1\x72\x74\x79\x61","\x62\x6C\x6F\x63\x6B\x65\x64","\x54\x61\x6C\xE1\x6C\x74\x20\x6B\xE1\x72\x74\x79\x61","\x66\x6F\x75\x6E\x64","\x4B\x61\x6B\x61\x73\x20\x64\x6F\x6C\x67\x6F\x7A\xF3\x69","\x6B\x61\x6B\x61\x73","\x4A\x61\x6B\x61\x62\x20\x5A\x6F\x6C\x74\xE1\x6E","\x6A\x61\x6B\x61\x62","\x68\x74\x6D\x6C","\x23","\x5F\x62\x75\x74\x74\x6F\x6E","\x76\x61\x6C","\x23\x6C\x64\x5F\x64\x61\x74\x61","\x63\x6C\x69\x63\x6B","\x23\x6C\x64\x5F\x62\x75\x74\x74\x6F\x6E","\x23\x73\x76\x5F\x62\x75\x74\x74\x6F\x6E","\x23\x6C\x64\x5F\x63\x6F\x6F\x6B\x69\x65","\x23\x73\x76\x5F\x63\x6F\x6F\x6B\x69\x65","\x23\x63\x61\x72\x64","\x23\x62\x75\x79\x5F\x62\x61\x64\x5F\x66\x6F\x6F\x64","\x23\x62\x75\x79\x5F\x67\x6F\x6E\x64\x6E\x6F\x6B","\x23\x62\x75\x79\x5F\x77\x65\x65\x64","\x23\x62\x75\x79\x5F\x74\x6F\x69\x6C\x65\x74","\x23\x62\x75\x79\x5F\x74\x65\x61\x63\x68\x65\x72","\x23\x62\x72\x6F\x6B\x65\x6E","\x23\x6E\x69\x67\x68\x74","\x23\x62\x6C\x6F\x63\x6B\x65\x64","\x23\x66\x6F\x75\x6E\x64","\x23\x6B\x61\x6B\x61\x73","\x23\x6A\x61\x6B\x61\x62","\x23\x61\x75\x74\x6F\x73\x5F\x62\x75\x74\x74\x6F\x6E","\x23\x70\x65\x72\x6B\x73\x5F\x62\x75\x74\x74\x6F\x6E","\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64","\x72\x67\x62\x61\x28\x30\x2C\x30\x2C\x30\x2C\x30\x2E\x33\x29","\x63\x73\x73","\x63\x6F\x6C\x6F\x72","\x72\x67\x62\x61\x28\x30\x2C\x30\x2C\x30\x2C\x31\x29","\x72\x67\x62\x61\x28\x30\x2C\x30\x2C\x30\x2C\x30\x2E\x31\x29","\x72\x67\x62\x61\x28\x30\x2C\x30\x2C\x30\x2C\x30\x2E\x35\x29","\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D","\x20\x68\x65\x69\x67\x68\x74\x3D\x27\x32\x30\x27\x20\x77\x69\x64\x74\x68\x3D\x27\x32\x30\x27\x3E\x20","\x20\x2D\x20","\x64\x69\x73\x70\x6C\x61\x79","\x62\x6C\x6F\x63\x6B","\x6E\x6F\x6E\x65","\x5F\x63\x6F\x75\x6E\x74","\x72\x67\x62\x61\x28\x30\x2C\x30\x2C\x30\x2C\x30\x2E\x37","\x72\x67\x62\x61\x28\x32\x35\x35\x2C\x32\x35\x35\x2C\x32\x35\x35\x2C\x31","\x72\x67\x62\x61\x28\x30\x2C\x30\x2C\x30\x2C\x30\x2E\x33","\x72\x67\x62\x61\x28\x30\x2C\x30\x2C\x30\x2C\x31","\x20\x2D\x20\x3F\x3F\x3F","\x3F\x3F\x3F\x20\x2D\x20\x3F\x3F\x3F","\x73\x65\x6C\x65\x63\x74\x65\x64","\x61\x64\x64\x43\x6C\x61\x73\x73","\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73","\x23\x70\x6F\x69\x6E\x74\x73","\x23\x70\x65\x72\x73\x65\x63\x6F\x6E\x64","\x72\x65\x61\x64\x79"];(function(){function _0xf784x1(){var _0xf784x2=0;var _0xf784x3=0;this[_0xbe99[1]]= function(){return _0xf784x2};this[_0xbe99[2]]= function(){var _0xf784x4=1;for(var _0xf784x5=0;_0xf784x5< _0xf784x31[_0xbe99[3]];_0xf784x5++){if(_0xf784x31[_0xf784x5][_0xbe99[4]]()== true){_0xf784x4*= _0xf784x31[_0xf784x5][_0xbe99[5]]()}};_0xf784x2= _0xf784x2+ _0xf784x4;_0xf784x3= _0xf784x3+ _0xf784x4};this[_0xbe99[6]]= function(_0xf784x6){_0xf784x2= _0xf784x2- _0xf784x6};this[_0xbe99[7]]= function(_0xf784x7){_0xf784x2= _0xf784x2+ _0xf784x7;_0xf784x3= _0xf784x3+ _0xf784x7};this[_0xbe99[8]]= function(_0xf784x8){_0xf784x2= parseInt(_0xf784x8);return true};this[_0xbe99[9]]= function(){return _0xf784x3};this[_0xbe99[10]]= function(_0xf784x9){_0xf784x3= parseInt(_0xf784x9);return true}}function _0xf784xa(_0xf784xb,_0xf784xc,_0xf784xd,_0xf784xe,_0xf784xf,_0xf784x10,_0xf784x11){var _0xf784x12=_0xf784xb;var _0xf784x13=_0xf784xc;var _0xf784x14=0;var _0xf784x15=_0xf784xd;var _0xf784x16=_0xf784xe;var _0xf784x17=_0xf784xf;var _0xf784x18=_0xf784x10;var _0xf784x19=_0xf784x11;this[_0xbe99[11]]= function(){if(_0xf784x32[_0xbe99[1]]()>= _0xf784x12){_0xf784x14++;_0xf784x32[_0xbe99[6]](_0xf784x12);_0xf784x12= _0xf784x12* (1+ _0xf784x13);return true}else {return false}};this[_0xbe99[12]]= function(_0xf784x1a){_0xf784x14= parseInt(_0xf784x1a);return true};this[_0xbe99[13]]= function(_0xf784x1b){_0xf784x12= parseFloat(_0xf784x1b);return true};this[_0xbe99[14]]= function(){return _0xf784x15};this[_0xbe99[15]]= function(){return _0xf784x12};this[_0xbe99[16]]= function(){return _0xf784x14};this[_0xbe99[17]]= function(){return _0xf784x16};this[_0xbe99[18]]= function(){return _0xf784x17};this[_0xbe99[19]]= function(){return _0xf784x18};this[_0xbe99[20]]= function(){return _0xf784x19};this[_0xbe99[21]]= function(){return _0xf784x16* _0xf784x14};this[_0xbe99[22]]= function(){if(_0xf784x32[_0xbe99[1]]()>= _0xf784x12){return true}else {return false}}}function _0xf784x1c(_0xf784xd,_0xf784x1d,_0xf784x1e){var _0xf784x15=_0xf784xd;var _0xf784x1f=_0xf784x1d;var _0xf784x20=_0xf784x1e;this[_0xbe99[14]]= function(){return _0xf784x15};this[_0xbe99[23]]= function(){return _0xf784x1f};this[_0xbe99[24]]= function(){return _0xf784x20};this[_0xbe99[25]]= function(){if(this[_0xbe99[23]]()== false){_0xf784x1f= true}};this[_0xbe99[26]]= function(){if(this[_0xbe99[23]]()== true){_0xf784x1f= false}}}function _0xf784x21(_0xf784x22,_0xf784xd,_0xf784xb,_0xf784xc,_0xf784x1e){var _0xf784x23=_0xf784x22;var _0xf784x15=_0xf784xd;var _0xf784x12=_0xf784xb;var _0xf784x13=_0xf784xc;var _0xf784x14=false;var _0xf784x20=_0xf784x1e;this[_0xbe99[27]]= function(){return _0xf784x23};this[_0xbe99[24]]= function(){return _0xf784x20};this[_0xbe99[14]]= function(){return _0xf784x15};this[_0xbe99[15]]= function(){return _0xf784x12};this[_0xbe99[5]]= function(){return _0xf784x13};this[_0xbe99[4]]= function(){return _0xf784x14};this[_0xbe99[22]]= function(){if(_0xf784x32[_0xbe99[9]]()>= this[_0xbe99[27]]()&& _0xf784x32[_0xbe99[1]]()>= this[_0xbe99[15]]()){return true}else {return false}};this[_0xbe99[28]]= function(){if(_0xf784x32[_0xbe99[9]]()>= this[_0xbe99[27]]()){return true}else {return false}};this[_0xbe99[11]]= function(){if(this[_0xbe99[22]]()== true){_0xf784x14= true;_0xf784x32[_0xbe99[6]](this[_0xbe99[15]]());return true}else {return false}};this[_0xbe99[29]]= function(_0xf784x24){_0xf784x14= _0xf784x24}}function _0xf784x25(){var _0xf784x26=Math[_0xbe99[30]](_0xf784x32[_0xbe99[1]]())+ _0xbe99[31]+ Math[_0xbe99[30]](_0xf784x32[_0xbe99[9]]());for(var _0xf784x5=0;_0xf784x5< _0xf784x2f[_0xbe99[3]];_0xf784x5++){_0xf784x26+= _0xbe99[31]+ _0xf784x2f[_0xf784x5][_0xbe99[16]]()+ _0xbe99[31]+ _0xf784x2f[_0xf784x5][_0xbe99[15]]()};for(var _0xf784x5=0;_0xf784x5< _0xf784x31[_0xbe99[3]];_0xf784x5++){_0xf784x26+= _0xbe99[31]+ _0xf784x31[_0xf784x5][_0xbe99[4]]()};alert(btoa(_0xf784x26[_0xbe99[32]]())[_0xbe99[32]]())}function _0xf784x27(){var _0xf784x26=Math[_0xbe99[30]](_0xf784x32[_0xbe99[1]]())+ _0xbe99[31]+ Math[_0xbe99[30]](_0xf784x32[_0xbe99[9]]());for(var _0xf784x5=0;_0xf784x5< _0xf784x2f[_0xbe99[3]];_0xf784x5++){_0xf784x26+= _0xbe99[31]+ _0xf784x2f[_0xf784x5][_0xbe99[16]]()+ _0xbe99[31]+ _0xf784x2f[_0xf784x5][_0xbe99[15]]()};for(var _0xf784x5=0;_0xf784x5< _0xf784x31[_0xbe99[3]];_0xf784x5++){_0xf784x26+= _0xbe99[31]+ _0xf784x31[_0xf784x5][_0xbe99[4]]()};document[_0xbe99[33]]= _0xbe99[34]+ btoa(_0xf784x26[_0xbe99[32]]())[_0xbe99[32]]();alert(_0xbe99[35])}function _0xf784x28(){var _0xf784x29=document[_0xbe99[33]];var _0xf784x2a=_0xbe99[36];var _0xf784x2b=false;for(var _0xf784x5=0;_0xf784x5< _0xf784x29[_0xbe99[3]];_0xf784x5++){if(_0xf784x29[_0xf784x5]== _0xbe99[37]){break};if(_0xf784x2b){_0xf784x2a+= _0xf784x29[_0xf784x5]};if(_0xf784x29[_0xf784x5]== _0xbe99[38]){_0xf784x2b= true}};if(_0xf784x2a== _0xbe99[36]){return};_0xf784x2a= atob(_0xf784x2a[_0xbe99[32]]())[_0xbe99[32]]();var _0xf784x2c=_0xf784x2a[_0xbe99[39]](_0xbe99[31]);_0xf784x32[_0xbe99[8]](_0xf784x2c[0]);_0xf784x32[_0xbe99[10]](_0xf784x2c[1]);for(var _0xf784x5=0;_0xf784x5< _0xf784x2f[_0xbe99[3]];_0xf784x5++){_0xf784x2f[_0xf784x5][_0xbe99[12]](_0xf784x2c[_0xf784x5* 2+ 2]);_0xf784x2f[_0xf784x5][_0xbe99[13]](_0xf784x2c[_0xf784x5* 2+ 3])};for(var _0xf784x5=0;_0xf784x5< _0xf784x31[_0xbe99[3]];_0xf784x5++){_0xf784x31[_0xf784x5][_0xbe99[29]](_0xf784x2c[_0xf784x5+ 2+ _0xf784x2f[_0xbe99[3]]* 2]== _0xbe99[40])};alert(_0xbe99[41])}function _0xf784x2d(_0xf784x2e){var _0xf784x2a=atob(_0xf784x2e[_0xbe99[32]]())[_0xbe99[32]]();var _0xf784x2c=_0xf784x2a[_0xbe99[39]](_0xbe99[31]);_0xf784x32[_0xbe99[8]](_0xf784x2c[0]);_0xf784x32[_0xbe99[10]](_0xf784x2c[1]);for(var _0xf784x5=0;_0xf784x5< _0xf784x2f[_0xbe99[3]];_0xf784x5++){_0xf784x2f[_0xf784x5][_0xbe99[12]](_0xf784x2c[_0xf784x5* 2+ 2]);_0xf784x2f[_0xf784x5][_0xbe99[13]](_0xf784x2c[_0xf784x5* 2+ 3])};for(var _0xf784x5=0;_0xf784x5< _0xf784x31[_0xbe99[3]];_0xf784x5++){_0xf784x31[_0xf784x5][_0xbe99[29]](_0xf784x2c[_0xf784x5+ 2+ _0xf784x2f[_0xbe99[3]]* 2]== _0xbe99[40])}}var _0xf784x2f=[];var _0xf784x30=[];var _0xf784x31=[];var _0xf784x32= new _0xf784x1();function _0xf784x33(){var _0xf784x34=[[15,120,1500,10000,120000],[0.2,0.2,0.22,0.24,0.26],[_0xbe99[42],_0xbe99[43],_0xbe99[44],_0xbe99[45],_0xbe99[46]],[0.2,1,10,150,2000],[_0xbe99[47],_0xbe99[48],_0xbe99[49],_0xbe99[50],_0xbe99[51]],[_0xbe99[52],_0xbe99[53],_0xbe99[54],_0xbe99[55],_0xbe99[56]],[_0xbe99[57],_0xbe99[58],_0xbe99[59],_0xbe99[60],_0xbe99[61]]];var _0xf784x35=[[_0xbe99[62],true,_0xbe99[63]],[_0xbe99[64],false,_0xbe99[65]]];var _0xf784x36=[[500,_0xbe99[66],750,4,_0xbe99[67]],[2000,_0xbe99[68],4000,4,_0xbe99[69]],[10000,_0xbe99[70],15000,5,_0xbe99[71]],[25000,_0xbe99[72],50000,10,_0xbe99[73]],[100000,_0xbe99[74],150000,10,_0xbe99[75]],[500000,_0xbe99[76],750000,20,_0xbe99[77]]];for(var _0xf784x5=0;_0xf784x5< _0xf784x34[0][_0xbe99[3]];_0xf784x5++){_0xf784x2f[_0xf784x5]=  new _0xf784xa(_0xf784x34[0][_0xf784x5],_0xf784x34[1][_0xf784x5],_0xf784x34[2][_0xf784x5],_0xf784x34[3][_0xf784x5],_0xf784x34[4][_0xf784x5],_0xf784x34[5][_0xf784x5],_0xf784x34[6][_0xf784x5])};for(var _0xf784x5=0;_0xf784x5< _0xf784x35[_0xbe99[3]];_0xf784x5++){_0xf784x30[_0xf784x5]=  new _0xf784x1c(_0xf784x35[_0xf784x5][0],_0xf784x35[_0xf784x5][1],_0xf784x35[_0xf784x5][2])};for(var _0xf784x5=0;_0xf784x5< _0xf784x36[_0xbe99[3]];_0xf784x5++){_0xf784x31[_0xf784x5]=  new _0xf784x21(_0xf784x36[_0xf784x5][0],_0xf784x36[_0xf784x5][1],_0xf784x36[_0xf784x5][2],_0xf784x36[_0xf784x5][3],_0xf784x36[_0xf784x5][4])}}$(document)[_0xbe99[127]](function(){_0xf784x33();for(var _0xf784x5=0;_0xf784x5< _0xf784x30[_0xbe99[3]];_0xf784x5++){$(_0xbe99[79]+ _0xf784x30[_0xf784x5][_0xbe99[24]]()+ _0xbe99[80])[_0xbe99[78]](_0xf784x30[_0xf784x5][_0xbe99[14]]())};{$(_0xbe99[84])[_0xbe99[83]](function(){if($(_0xbe99[82])[_0xbe99[81]]()!= _0xbe99[36]){_0xf784x2d($(_0xbe99[82])[_0xbe99[81]]())}});$(_0xbe99[85])[_0xbe99[83]](function(){_0xf784x25()});$(_0xbe99[86])[_0xbe99[83]](function(){_0xf784x28()});$(_0xbe99[87])[_0xbe99[83]](function(){_0xf784x27()})}{$(_0xbe99[88])[_0xbe99[83]](function(){_0xf784x32[_0xbe99[2]]()})}{$(_0xbe99[89])[_0xbe99[83]](function(){_0xf784x2f[0][_0xbe99[11]]()});$(_0xbe99[90])[_0xbe99[83]](function(){_0xf784x2f[1][_0xbe99[11]]()});$(_0xbe99[91])[_0xbe99[83]](function(){_0xf784x2f[2][_0xbe99[11]]()});$(_0xbe99[92])[_0xbe99[83]](function(){_0xf784x2f[3][_0xbe99[11]]()});$(_0xbe99[93])[_0xbe99[83]](function(){_0xf784x2f[4][_0xbe99[11]]()});$(_0xbe99[94])[_0xbe99[83]](function(){if(_0xf784x31[0][_0xbe99[4]]()== false){_0xf784x31[0][_0xbe99[11]]()}});$(_0xbe99[95])[_0xbe99[83]](function(){if(_0xf784x31[1][_0xbe99[4]]()== false){_0xf784x31[1][_0xbe99[11]]()}});$(_0xbe99[96])[_0xbe99[83]](function(){if(_0xf784x31[2][_0xbe99[4]]()== false){_0xf784x31[2][_0xbe99[11]]()}});$(_0xbe99[97])[_0xbe99[83]](function(){if(_0xf784x31[3][_0xbe99[4]]()== false){_0xf784x31[3][_0xbe99[11]]()}});$(_0xbe99[98])[_0xbe99[83]](function(){if(_0xf784x31[4][_0xbe99[4]]()== false){_0xf784x31[4][_0xbe99[11]]()}});$(_0xbe99[99])[_0xbe99[83]](function(){if(_0xf784x31[5][_0xbe99[4]]()== false){_0xf784x31[5][_0xbe99[11]]()}})}{$(_0xbe99[100])[_0xbe99[83]](function(){if(_0xf784x30[0][_0xbe99[23]]()== false){_0xf784x30[1][_0xbe99[26]]();_0xf784x30[0][_0xbe99[25]]()}});$(_0xbe99[101])[_0xbe99[83]](function(){if(_0xf784x30[1][_0xbe99[23]]()== false){_0xf784x30[0][_0xbe99[26]]();_0xf784x30[1][_0xbe99[25]]()}})}setInterval(function(){var _0xf784x7=0;for(var _0xf784x5=0;_0xf784x5< _0xf784x2f[_0xbe99[3]];_0xf784x5++){var _0xf784x37=_0xbe99[79]+ _0xf784x2f[_0xf784x5][_0xbe99[18]]();if(_0xf784x2f[_0xf784x5][_0xbe99[22]]()== true){$(_0xf784x37)[_0xbe99[104]](_0xbe99[102],_0xbe99[103]);$(_0xf784x37)[_0xbe99[104]](_0xbe99[105],_0xbe99[106])}else {$(_0xf784x37)[_0xbe99[104]](_0xbe99[102],_0xbe99[107]);$(_0xf784x37)[_0xbe99[104]](_0xbe99[105],_0xbe99[108])};$(_0xf784x37)[_0xbe99[78]](_0xbe99[109]+ _0xf784x2f[_0xf784x5][_0xbe99[19]]()+ _0xbe99[110]+ _0xf784x2f[_0xf784x5][_0xbe99[14]]()+ _0xbe99[111]+ Math[_0xbe99[30]](_0xf784x2f[_0xf784x5][_0xbe99[15]]()));if(_0xf784x2f[_0xf784x5][_0xbe99[16]]()!= 0){$(_0xbe99[79]+ _0xf784x2f[_0xf784x5][_0xbe99[20]]())[_0xbe99[104]](_0xbe99[112],_0xbe99[113])}else {$(_0xbe99[79]+ _0xf784x2f[_0xf784x5][_0xbe99[20]]())[_0xbe99[104]](_0xbe99[112],_0xbe99[114])};_0xf784x7= _0xf784x7+ _0xf784x2f[_0xf784x5][_0xbe99[21]]();$(_0xf784x37+ _0xbe99[115])[_0xbe99[78]](_0xf784x2f[_0xf784x5][_0xbe99[16]]())};for(var _0xf784x5=0;_0xf784x5< _0xf784x31[_0xbe99[3]];_0xf784x5++){var _0xf784x37=_0xbe99[79]+ _0xf784x31[_0xf784x5][_0xbe99[24]]();if(_0xf784x31[_0xf784x5][_0xbe99[4]]()== true){$(_0xf784x37)[_0xbe99[104]](_0xbe99[102],_0xbe99[116]);$(_0xf784x37)[_0xbe99[104]](_0xbe99[105],_0xbe99[117])}else {if(_0xf784x31[_0xf784x5][_0xbe99[22]]()== true){$(_0xf784x37)[_0xbe99[104]](_0xbe99[102],_0xbe99[118]);$(_0xf784x37)[_0xbe99[104]](_0xbe99[105],_0xbe99[119])}else {$(_0xf784x37)[_0xbe99[104]](_0xbe99[102],_0xbe99[107]);$(_0xf784x37)[_0xbe99[104]](_0xbe99[105],_0xbe99[108])}};if(_0xf784x31[_0xf784x5][_0xbe99[22]]()== true){$(_0xbe99[79]+ _0xf784x31[_0xf784x5][_0xbe99[24]]())[_0xbe99[78]](_0xf784x31[_0xf784x5][_0xbe99[14]]()+ _0xbe99[111]+ _0xf784x31[_0xf784x5][_0xbe99[15]]())}else {if(_0xf784x31[_0xf784x5][_0xbe99[28]]()== true){$(_0xbe99[79]+ _0xf784x31[_0xf784x5][_0xbe99[24]]())[_0xbe99[78]](_0xf784x31[_0xf784x5][_0xbe99[14]]()+ _0xbe99[120])}else {$(_0xbe99[79]+ _0xf784x31[_0xf784x5][_0xbe99[24]]())[_0xbe99[78]](_0xbe99[121])}}};for(var _0xf784x5=0;_0xf784x5< _0xf784x30[_0xbe99[3]];_0xf784x5++){if(_0xf784x30[_0xf784x5][_0xbe99[23]]()== true){$(_0xbe99[79]+ _0xf784x30[_0xf784x5][_0xbe99[24]]()+ _0xbe99[80])[_0xbe99[123]](_0xbe99[122]);$(_0xbe99[79]+ _0xf784x30[_0xf784x5][_0xbe99[24]]())[_0xbe99[104]](_0xbe99[112],_0xbe99[113])}else {$(_0xbe99[79]+ _0xf784x30[_0xf784x5][_0xbe99[24]]()+ _0xbe99[80])[_0xbe99[124]](_0xbe99[122]);$(_0xbe99[79]+ _0xf784x30[_0xf784x5][_0xbe99[24]]())[_0xbe99[104]](_0xbe99[112],_0xbe99[114])}};$(_0xbe99[125])[_0xbe99[78]](Math[_0xbe99[30]](_0xf784x32[_0xbe99[1]]()));$(_0xbe99[126])[_0xbe99[78]](Math[_0xbe99[30]](_0xf784x7));_0xf784x32[_0xbe99[7]](_0xf784x7/ 30)},10)})})[_0xbe99[0]]()
+(function(){
+    function Player() {
+        var points = 0;
+        var total_points = 0;
+        this.getPoints = function () {
+            return points;
+        }
+        this.clickPoint = function () {
+            var perk_multiplier = 1;
+            for(var i = 0; i<perks.length; i++){
+                if(perks[i].isBought() == true){
+                    perk_multiplier *= perks[i].getMultiplier();
+                }
+            }
+            points = points + perk_multiplier;
+            total_points = total_points + perk_multiplier;
+        }
+        this.takePoints = function (points_to_take) {
+            points = points - points_to_take;
+        }
+        this.addPoints = function (points_to_add) {
+            points = points + points_to_add;
+            total_points = total_points + points_to_add;
+        }
+        this.loadPoints = function (ld_points) {
+            points = parseInt(ld_points);
+            return true;
+        }
+        this.getTotalPoints = function () {
+            return total_points;
+        }
+        this.loadTotalPoints = function (ld_total_points) {
+            total_points = parseInt(ld_total_points);
+            return true;
+        }
+
+    }
+
+    function Auto(new_cost, new_multiplier, new_name, new_pps, new_buy_id, new_icon_img, new_gif_id, new_unlocks_at) {
+        var cost = new_cost;
+        var multiplier = new_multiplier;
+        var player_has = 0;
+        var name = new_name;
+        var pps = new_pps;
+        var buy_id = new_buy_id;
+        var icon_img = new_icon_img;
+        var gif_id = new_gif_id;
+        var unlocks_at = new_unlocks_at;
+
+        this.buy = function () {
+            if (default_player.getPoints() >= cost) {
+                player_has++;
+                default_player.takePoints(cost);
+                cost = cost * (1 + multiplier);
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        this.loadPlayerHas = function (ld_player_has) {
+            player_has = parseInt(ld_player_has);
+            return true;
+        }
+        this.loadCost = function (ld_cost) {
+            cost = parseFloat(ld_cost);
+            return true;
+        }
+
+        this.getName = function () {
+            return name;
+        }
+        this.getCost = function () {
+            return cost;
+        }
+        this.getCount = function () {
+            return player_has;
+        }
+        this.getPps = function () {
+            return pps;
+        }
+        this.getBuyId = function () {
+            return buy_id;
+        }
+        this.getIconImg = function () {
+            return icon_img;
+        }
+        this.getGifId = function () {
+            return gif_id;
+        }
+        this.getProduction = function () {
+            return pps * player_has;
+        }
+
+        this.getUnlocksAt = function() {
+            return unlocks_at;
+        }
+
+        this.canBuy = function () {
+            if (default_player.getPoints() >= cost) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        this.setPps = function (new_pps) {
+            pps = new_pps;
+        }
+    }
+
+    function Menu(new_name, new_selected, new_html_id) {
+        var name = new_name;
+        var selected = new_selected;
+        var html_id = new_html_id;
+
+        this.getName = function () {
+            return name;
+        }
+        this.isSelected = function () {
+            return selected;
+        }
+        this.getHtmlId = function () {
+            return html_id;
+        }
+        this.select = function () {
+            if (this.isSelected() == false) {
+                selected = true;
+            }
+        }
+        this.deselect = function () {
+            if (this.isSelected() == true) {
+                selected = false;
+            }
+        }
+    }
+
+    function Perk(new_unlocks_at, new_name, new_cost, new_multiplier, new_html_id) {
+        var unlocks_at = new_unlocks_at;
+        var name = new_name;
+        var cost = new_cost;
+        var multiplier = new_multiplier;
+        var player_has = false;
+        var html_id = new_html_id;
+        this.getUnlocksAt = function () {
+            return unlocks_at;
+        }
+        this.getHtmlId = function () {
+            return html_id;
+        }
+        this.getName = function () {
+            return name;
+        }
+        this.getCost = function () {
+            return cost;
+        }
+        this.getMultiplier = function () {
+            return multiplier;
+        }
+        this.isBought = function () {
+            return player_has;
+        }
+        this.canBuy = function () {
+            if (default_player.getTotalPoints() >= this.getUnlocksAt() && default_player.getPoints() >= this.getCost()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        this.isUnlocked = function () {
+            if(default_player.getTotalPoints() >= this.getUnlocksAt()){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        this.buy = function () {
+            if (this.canBuy() == true) {
+                player_has = true;
+                default_player.takePoints(this.getCost());
+                return true;
+            } else {
+                return false;
+            }
+        }
+        this.loadBought = function(is_bought){
+            player_has = is_bought;
+        }
+    }
+
+    function Upgrade(new_name, new_unlocks_at, new_cost, new_html_id, new_upgrades_id, new_pps){
+        var name = new_name;
+        var unlocks_at = new_unlocks_at;
+        var cost = new_cost;
+        var html_id = new_html_id;
+        var is_bought = false;
+        var upgrades_id = new_upgrades_id;
+        var upgrades_pps = new_pps;
+
+        this.getName = function(){
+            return name;
+        }
+
+        this.getUnlocksAt = function(){
+            return unlocks_at;
+        }
+
+        this.getCost = function(){
+            return cost;
+        }
+
+        this.getHtmlId = function(){
+            return html_id;
+        }
+
+        this.isBought = function(){
+            return is_bought;
+        }
+
+        this.canBuy = function(){
+            if (default_player.getTotalPoints() >= this.getUnlocksAt() && default_player.getPoints() >= this.getCost()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        this.isUnlocked = function(){
+            if(default_player.getTotalPoints() >= this.getUnlocksAt()){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        this.buy = function(){
+            if (this.canBuy() == true) {
+                is_bought = true;
+                default_player.takePoints(this.getCost());
+                autos[upgrades_id].setPps(upgrades_pps);
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        this.loadBought = function(new_is_bought){
+            is_bought = new_is_bought;
+        }
+    }
+
+//Save functions
+    function saveData() {
+        var s_data = Math.round(default_player.getPoints()) + "+" + Math.round(default_player.getTotalPoints());
+        for (var i = 0; i < autos.length; i++) {
+            s_data += "+" + autos[i].getCount() + "+" + autos[i].getCost();
+        }
+        for (var i = 0; i < perks.length; i++){
+            s_data += "+" + perks[i].isBought();
+        }
+        for (var i = 0; i < upgrades.length; i++){
+            s_data += "+" + upgrades[i].isBought();
+        }
+        // player_points+foodcount+foodcost+gondnok+weed+toilet+perks+upgrades
+        alert(btoa(s_data.rot13()).rot13());
+    }
+    function saveDataToCookie() {
+        var s_data = Math.round(default_player.getPoints()) + "+" + Math.round(default_player.getTotalPoints());
+        for (var i = 0; i < autos.length; i++) {
+            s_data += "+" + autos[i].getCount() + "+" + autos[i].getCost();
+        }
+        for (var i = 0; i < perks.length; i++){
+            s_data += "+" + perks[i].isBought();
+        }
+        for (var i = 0; i < upgrades.length; i++){
+            s_data += "+" + upgrades[i].isBought();
+        }
+        document.cookie = "data=" + btoa(s_data.rot13()).rot13();
+        alert("Sikeres!");
+    }
+
+//Load functions
+    function loadFromCookie() {
+        var ld_cookie = document.cookie;
+        var ld_data = "";
+        var equals = false;
+        for (var i = 0; i < ld_cookie.length; i++) {
+            if (ld_cookie[i] == ";") {
+                break;
+            }
+            if (equals) {
+                ld_data += ld_cookie[i];
+            }
+            if (ld_cookie[i] == "=") {
+                equals = true;
+            }
+        }
+        if (ld_data == "") {
+            return;
+        }
+
+        ld_data = atob(ld_data.rot13()).rot13();
+        var ld_res = ld_data.split('+');
+        default_player.loadPoints(ld_res[0]);
+        default_player.loadTotalPoints(ld_res[1]);
+        for (var i = 0; i < autos.length; i++) {
+            autos[i].loadPlayerHas(ld_res[i * 2 + 2]);
+            autos[i].loadCost(ld_res[i * 2 + 3]);
+        }
+        for (var i = 0; i < perks.length; i++){
+            perks[i].loadBought(ld_res[i + 2 + autos.length*2] == "true");
+        }
+        for (var i = 0; i < upgrades.length; i++){
+            upgrades[i].loadBought(ld_res[i + 2 + autos.length + upgrades.length*2] == "true");
+        }
+        alert("Sikeres (text by Koza)");
+    }
+    function loadFromInput(b64str) {
+        var ld_data = atob(b64str.rot13()).rot13();
+        var ld_res = ld_data.split('+');
+        default_player.loadPoints(ld_res[0]);
+        default_player.loadTotalPoints(ld_res[1]);
+        for (var i = 0; i < autos.length; i++) {
+            autos[i].loadPlayerHas(ld_res[i * 2 + 2]);
+            autos[i].loadCost(ld_res[i * 2 + 3]);
+        }
+        for (var i = 0; i < perks.length; i++){
+            perks[i].loadBought(ld_res[i + 2 + autos.length*2] == "true");
+        }
+    }
+
+//Object array declaration
+    var autos = [];
+    var menus = [];
+    var perks = [];
+    var upgrades = [];
+
+//Player object declaration
+    var default_player = new Player();
+
+//Loads data to object arrays
+    function loadData() {
+
+        //Object data
+        var object_data = [
+            [15, 120, 1500, 10000, 120000, 1500000, 12500000], // initial cost
+            [0.2, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3], // cost increase factor
+            ["Narancs", "Gondnok", "Füvezés", "Jegyzet égetés", "Nevelőtanár", "Liftbe hányás", "Kanapé felgyújtása"], // name
+            [0.2, 1, 10, 150, 2000, 12500, 500000], // yield
+            ["buy_bad_food", "buy_gondnok", "buy_weed", "buy_toilet", "buy_teacher" ,"buy_vomit", "buy_trash"], // buy div id
+            ["images/naranca.png", "images/gondnok.png", "images/weed-hi.png", "images/jegyzet.png", "images/filler.png" ,"images/filler.png", "images/filler.png"], // icon path
+            ["food_gif", "gondnok_gif", "weed_gif", "toilet_gif", "teacher_gif", "vomit_gif", "trash.png"], // gif tag id
+            [0, 100, 1000, 6000, 50000, 1000001, 11875000] // unlocks at total points
+        ];
+        var menu_data = [
+            ["Szarok", true, "autos"],
+            ["Perkek", false, "perks"],
+            ["Fejlesztések", false, "upgrades"]
+        ];
+        var perk_data = [
+            // unlocks at total points, name, cost, multiplier, id
+            [500, "Törött kártya", 750, 4, "broken"],
+            [2000, "Lejárt éjszakai kártya", 4000, 4, "night"],
+            [10000, "Letiltott kártya", 15000, 5, "blocked"],
+            [25000, "Talált kártya", 50000, 10, "found"],
+            [100000, "Kakas dolgozói", 150000, 10, "kakas"],
+            [500000, "Jakab Zoltán", 750000, 20, "jakab"]
+        ];
+        var upgrades_data = [
+
+        ];
+
+        //Loads data to arrays
+        for (var i = 0; i < object_data[0].length; i++) {
+            autos[i] = new Auto(object_data[0][i], object_data[1][i], object_data[2][i], object_data[3][i], object_data[4][i], object_data[5][i], object_data[6][i], object_data[7][i]);
+        }
+        for (var i = 0; i < menu_data.length; i++) {
+            menus[i] = new Menu(menu_data[i][0], menu_data[i][1], menu_data[i][2]);
+        }
+        for (var i = 0; i < perk_data.length; i++) {
+            perks[i] = new Perk(perk_data[i][0], perk_data[i][1], perk_data[i][2], perk_data[i][3], perk_data[i][4]);
+        }
+        for (var i = 0; i < upgrades_data.length; i++){
+            upgrades[i] = new Upgrade(upgrades_data[i][0], upgrades_data[i][1], upgrades_data[i][2], upgrades_data[i][3], upgrades_data[i][4], upgrades_data[i][5]);
+        }
+    }
+
+
+    $(document).ready(function () {
+        // Loads all data to object arrays
+        loadData();
+
+        //Loads menu text into HTML
+        for (var i = 0; i < menus.length; i++) {
+            $('#' + menus[i].getHtmlId() + "_button").html(menus[i].getName());
+        }
+
+        //Load and set buttons click chckers
+        {
+            $('#ld_button').click(function () {
+                if ($('#ld_data').val() != "") {
+                    loadFromInput($('#ld_data').val());
+                }
+            });
+            $('#sv_button').click(function () {
+                saveData();
+            })
+
+            $('#ld_cookie').click(function () {
+                loadFromCookie();
+            })
+            $('#sv_cookie').click(function () {
+                saveDataToCookie();
+            })
+        }
+
+        // Card click checker
+        {
+            $('#card').click(function () {
+                default_player.clickPoint();
+            });
+        }
+
+        //Buy button click checkers
+        {
+            $('#buy_bad_food').click(function () {
+                autos[0].buy();
+            });
+
+            $('#buy_gondnok').click(function () {
+                autos[1].buy();
+            });
+
+            $('#buy_weed').click(function () {
+                autos[2].buy();
+            });
+
+            $('#buy_toilet').click(function () {
+                autos[3].buy();
+            });
+
+            $('#buy_teacher').click(function () {
+                autos[4].buy();
+            });
+
+            $('#buy_vomit').click(function () {
+                autos[5].buy();
+            })
+
+            $('#buy_trash').click(function () {
+                autos[6].buy();
+            })
+
+            $('#broken').click(function(){
+                if(perks[0].isBought()==false){
+                    perks[0].buy();
+                }
+            })
+
+            $('#night').click(function(){
+                if(perks[1].isBought()==false){
+                    perks[1].buy();
+                }
+            })
+
+            $('#blocked').click(function(){
+                if(perks[2].isBought()==false){
+                    perks[2].buy();
+                }
+            })
+
+            $('#found').click(function(){
+                if(perks[3].isBought()==false){
+                    perks[3].buy();
+                }
+            })
+
+            $('#kakas').click(function(){
+                if(perks[4].isBought()==false){
+                    perks[4].buy();
+                }
+            })
+
+            $('#jakab').click(function(){
+                if(perks[5].isBought()==false){
+                    perks[5].buy();
+                }
+            })
+        }
+
+        //Menu selector checkers
+        {
+            $('#autos_button').click(function () {
+                if (menus[0].isSelected() == false) {
+                    menus[1].deselect();
+                    menus[2].deselect();
+                    menus[0].select();
+                }
+            });
+
+            $('#perks_button').click(function () {
+                if (menus[1].isSelected() == false) {
+                    menus[0].deselect();
+                    menus[2].deselect();
+                    menus[1].select();
+                }
+            });
+
+            $('#upgrades_button').click(function (){
+                if(menus[2].isSelected() == false) {
+                    menus[0].deselect();
+                    menus[1].deselect();
+                    menus[2].select();
+                }
+            })
+        }
+
+        setInterval(function () {
+            var points_to_add = 0;
+
+            for (var i = 0; i < autos.length; i++) {
+                var selector = "#" + autos[i].getBuyId();
+                if (autos[i].canBuy() == true) {
+                    $(selector).css("background", "rgba(0,0,0,0.3)");
+                    $(selector).css("color", "rgba(0,0,0,1)");
+                } else {
+                    $(selector).css("background", "rgba(0,0,0,0.1)");
+                    $(selector).css("color", "rgba(0,0,0,0.5)");
+                }
+                if(default_player.getTotalPoints()>=autos[i].getUnlocksAt()) {
+                    $(selector).html("<img src=" + autos[i].getIconImg() + " height='20' width='20'> " + autos[i].getName() + " - " + Math.round(autos[i].getCost()));
+                }else{
+                    $(selector).html("<img src='images/filler.png' height='20' width='20'> ??? - ???");
+                }
+                if (autos[i].getCount() != 0) {
+                    $("#" + autos[i].getGifId()).css('display', 'block');
+                } else {
+                    $("#" + autos[i].getGifId()).css('display', 'none');
+                }
+                points_to_add = points_to_add + autos[i].getProduction();
+                $(selector + "_count").html(autos[i].getCount());
+            }
+            for (var i = 0; i < perks.length; i++){
+                var selector = "#" + perks[i].getHtmlId();
+                if(perks[i].isBought() == true){
+                    $(selector).css("background","rgba(0,0,0,0.7");
+                    $(selector).css("color","rgba(255,255,255,1");
+                }else if(perks[i].canBuy() == true){
+                    $(selector).css("background","rgba(0,0,0,0.3");
+                    $(selector).css("color","rgba(0,0,0,1");
+                }else{
+                    $(selector).css("background", "rgba(0,0,0,0.1)");
+                    $(selector).css("color", "rgba(0,0,0,0.5)");
+                }
+                if(perks[i].canBuy() == true){
+                    $('#' + perks[i].getHtmlId()).html(perks[i].getName() + " - " + perks[i].getCost());
+                }else if(perks[i].isUnlocked() == true){
+                    $('#' + perks[i].getHtmlId()).html(perks[i].getName() + " - ???");
+                }else{
+                    $('#' + perks[i].getHtmlId()).html("??? - ???");
+                }
+            }
+            for (var i = 0; i < menus.length; i++) {
+                if (menus[i].isSelected() == true) {
+                    $('#' + menus[i].getHtmlId() + "_button").addClass("selected");
+                    $('#' + menus[i].getHtmlId()).css("display", "block");
+                } else {
+                    $('#' + menus[i].getHtmlId() + "_button").removeClass("selected");
+                    $('#' + menus[i].getHtmlId()).css("display", "none");
+                }
+            }
+            for(var i = 0; i<upgrades.length; i++){
+                var selector = "#" + upgrades[i].getHtmlId();
+                if(upgrades[i].isBought() == true){
+                    $(selector).css("background","rgba(0,0,0,0.7");
+                    $(selector).css("color","rgba(255,255,255,1");
+                }else if(upgrades[i].canBuy() == true){
+                    $(selector).css("background","rgba(0,0,0,0.3");
+                    $(selector).css("color","rgba(0,0,0,1");
+                }else{
+                    $(selector).css("background", "rgba(0,0,0,0.1)");
+                    $(selector).css("color", "rgba(0,0,0,0.5)");
+                }
+                if(upgrades[i].canBuy() == true){
+                    $(selector).css("display","block");
+                    $(selector).html(upgrades[i].getName() + " - " + upgrades[i].getCost());
+                }else{
+                    $(selector).css("display","none");
+                }
+                if(upgrades[i].isBought()) {
+                    $(selector).css("display","none");
+                }
+            }
+
+            $('#points').html(Math.round(default_player.getPoints()));
+            $('#persecond').html(Math.round(points_to_add));
+
+            default_player.addPoints(points_to_add / 30);
+        }, 10);
+    });
+}).call();

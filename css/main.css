@@ -75,7 +75,7 @@
     display:block;
 }
 .button{
-    width:calc(50% - 11px);
+    width:calc(33% - 9.5px);
     padding:5px;
     background:rgba(0,0,0,0.4);
     float:right;
