@@ -72,6 +72,7 @@ $version = "a0.4"
         <div class="perk" id="kakas"></div>
         <div class="perk" id="jakab"></div>
         <div class="perk" id="nagypisti"></div>
+        <div class="perk" id="ob"></div>
     </div>
     <div id="upgrades">
         <div class="perk" id="pomelo"></div>
