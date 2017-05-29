@@ -386,7 +386,7 @@
             ["Nevtanár helyett KB",             10000,   300000,    "kb",       4,  4000,       "KB felbaszása"         ],
             ["Lift helyett szemétledobó",       10000,   2000000,   "trash",    5,  25000,      "Szemétledobóba szarás" ],
             ["Kanapé helyett lift",             10000,   25000000,  "lift",     6,  1000000,    "Lift felgyújtása"      ],
-            ["Szemétledobó helyett szellőző",   100000,   4000000,   "vent",     5,  50000,      "Szellőzőbe szarás"     ]
+            ["Szemétledobó helyett szellőző",   10000,   4000000,   "vent",     5,  50000,      "Szellőzőbe szarás"     ]
         ];
 
         //Loads data to arrays
