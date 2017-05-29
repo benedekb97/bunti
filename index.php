@@ -94,5 +94,5 @@ $version = "a0.4"
 </body>
 <script type="text/javascript" src="js/rot13.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/main.min.js"></script>
 </html>
