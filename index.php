@@ -95,5 +95,10 @@ $version = "a0.4"
 </body>
 <script type="text/javascript" src="js/rot13.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/main.min.js"></script>
+<?php
+if(in_array($_SERVER["REMOTE_ADDR"], ["127.0.0.1", "::1", "localhost"]))
+    echo '<script type="text/javascript" src="js/main.js"></script>';
+else
+    echo '<script type="text/javascript" src="js/main.min.js"></script>';
+?>
 </html>
