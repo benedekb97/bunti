@@ -2,6 +2,7 @@
     function Player() {
         var points = 0;
         var total_points = 0;
+        var total_time = 0;
 
         this.getPoints = function () {
             return points;
@@ -37,6 +38,13 @@
         this.loadTotalPoints = function (ld_total_points) {
             total_points = parseInt(ld_total_points);
             return true;
+        };
+
+        this.getTime = function () {
+            return total_time;
+        };
+        this.addTime = function(add_time) {
+            total_time = total_time + add_time;
         }
 
     }
@@ -57,6 +65,7 @@
                 player_has++;
                 default_player.takePoints(cost);
                 cost = cost * (1 + multiplier);
+                saveDataToCookie();
                 return true;
             } else {
                 return false;
@@ -181,6 +190,7 @@
             if (this.canBuy() && player_has === false) {
                 player_has = true;
                 default_player.takePoints(this.getCost());
+                saveDataToCookie();
                 return true;
             } else {
                 return false;
@@ -232,6 +242,7 @@
                 default_player.takePoints(this.getCost());
                 autos[upgrades_id].setPps(upgrades_pps);
                 autos[upgrades_id].setName(upgrades_name);
+                saveDataToCookie();
                 return true;
             } else {
                 return false;
@@ -244,22 +255,6 @@
     }
 
 //Save functions
-    function saveData() {
-        var s_data = Math.round(default_player.getPoints()) + "+" + Math.round(default_player.getTotalPoints());
-        for (var i = 0; i < autos.length; i++) {
-            s_data += "+" + autos[i].getCount() + "+" + autos[i].getCost();
-        }
-        for (var i = 0; i < perks.length; i++){
-            s_data += "+" + perks[i].isBought();
-        }
-        for (var i = 0; i < upgrades.length; i++){
-            s_data += "+" + upgrades[i].isBought();
-        }
-
-        // player_points+foodcount+foodcost+gondnok+weed+toilet+perks+upgrades
-        alert(btoa(s_data.rot13()).rot13());
-    }
-
     function saveDataToCookie() {
         var s_data = Math.round(default_player.getPoints()) + "+" + Math.round(default_player.getTotalPoints());
         for (var i = 0; i < autos.length; i++) {
@@ -273,8 +268,6 @@
         }
 
         document.cookie = "data=" + btoa(s_data.rot13()).rot13();
-
-        alert("Sikeres mentés!");
     }
 
 //Load functions
@@ -312,23 +305,6 @@
         }
         for (var i = 0; i < upgrades.length; i++){
             upgrades[i].loadBought(ld_res[i + 2 + autos.length + upgrades.length*2] === "true");
-        }
-        alert("Sikeres betöltés!");
-    }
-    function loadFromInput(b64str) {
-        var ld_data = atob(b64str.rot13()).rot13();
-        var ld_res = ld_data.split('+');
-
-        default_player.loadPoints(ld_res[0]);
-        default_player.loadTotalPoints(ld_res[1]);
-
-        for (var i = 0; i < autos.length; i++) {
-            autos[i].loadPlayerHas(ld_res[i * 2 + 2]);
-            autos[i].loadCost(ld_res[i * 2 + 3]);
-        }
-
-        for (var i = 0; i < perks.length; i++){
-            perks[i].loadBought(ld_res[i + 2 + autos.length*2] === "true");
         }
     }
 
@@ -408,6 +384,9 @@
     $(document).ready(function () {
         // Loads all data to object arrays
         loadData();
+
+        // Loads player data
+        loadFromCookie();
 
         //Loads menu text into HTML
         for (var i = 0; i < menus.length; i++) {
@@ -564,6 +543,12 @@
             $('#persecond').html(Math.round(points_to_add));
 
             default_player.addPoints(points_to_add / 30);
+
+            default_player.addTime(10);
+
+            if(default_player.getTime()%3000 === 0) {
+                saveDataToCookie();
+            }
 
         }, 10);
     });

@@ -16,13 +16,6 @@ $version = "a0.4"
  onmousedown="return false;">
 <h1>Büntipont gyűjtő fepoltal</h1>
 <h3><?= $version; ?></h3>
-
-<button id="sv_cookie">Mentés kukiba</button>
-<button id="ld_cookie">Betöltés kukiból</button>
-<br>
-<button id="sv_button">Mentés</button>
-<input type="text" id="ld_data" placeholder="Kód">
-<button id="ld_button">Betölt</button>
 <div class="card" id="card"></div>
 <div class="points" id="points"></div>
 <div class="persecond" id="persecond"></div>
