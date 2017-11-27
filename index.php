@@ -17,10 +17,8 @@ $version = "a0.4"
 <h1>Büntipont gyűjtő fepoltal</h1>
 <h3><?= $version; ?></h3>
 
-<button id="sv_cookie">Mentés cookie-ba</button>
-<button id="ld_cookie">Betöltés cookie-bülndmfmnemrnnenebybewbxbhdbdbnxndm,x vdmsm d nm x c c d x cd
-    ndknrhennendbdsbbedv
-</button>
+<button id="sv_cookie">Mentés kukiba</button>
+<button id="ld_cookie">Betöltés kukiból</button>
 <br>
 <button id="sv_button">Mentés</button>
 <input type="text" id="ld_data" placeholder="Kód">

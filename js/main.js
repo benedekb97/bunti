@@ -178,7 +178,7 @@
         };
 
         this.buy = function () {
-            if (this.canBuy()) {
+            if (this.canBuy() && player_has === false) {
                 player_has = true;
                 default_player.takePoints(this.getCost());
                 return true;
@@ -227,7 +227,7 @@
         };
 
         this.buy = function(){
-            if (this.canBuy()) {
+            if (this.canBuy() && is_bought === false) {
                 is_bought = true;
                 default_player.takePoints(this.getCost());
                 autos[upgrades_id].setPps(upgrades_pps);
@@ -274,7 +274,7 @@
 
         document.cookie = "data=" + btoa(s_data.rot13()).rot13();
 
-        alert("Sikeres!");
+        alert("Sikeres mentés!");
     }
 
 //Load functions
@@ -313,7 +313,7 @@
         for (var i = 0; i < upgrades.length; i++){
             upgrades[i].loadBought(ld_res[i + 2 + autos.length + upgrades.length*2] === "true");
         }
-        alert("Sikeres (text by Koza)");
+        alert("Sikeres betöltés!");
     }
     function loadFromInput(b64str) {
         var ld_data = atob(b64str.rot13()).rot13();
@@ -364,14 +364,14 @@
 
         var perk_data = [
         //  total points, name                      cost        multiplier  html id
-            [500,       "Törött kártya",            750,        4,  "broken"    ],
-            [2000,      "Lejárt éjszakai kártya",   4000,       4,  "night"     ],
+            [500,       "Törött kártya",            750,        5,  "broken"    ],
+            [2000,      "Lejárt éjszakai kártya",   4000,       5,  "night"     ],
             [10000,     "Letiltott kártya",         15000,      5,  "blocked"   ],
-            [25000,     "Talált kártya",            50000,      10, "found"     ],
-            [100000,    "Kakas dolgozói",           150000,     10, "kakas"     ],
-            [500000,    "Jakab Zoltán",             750000,     20, "jakab"     ],
-            [1000000,   "Nagy István",              1500000,    10, "nagypisti" ],
-            [5000000,   "Kamu ŐB",                  10000000,   10, "ob"        ]
+            [25000,     "Talált kártya",            50000,      5,  "found"     ],
+            [100000,    "Kakas dolgozói",           150000,     5,  "kakas"     ],
+            [500000,    "Jakab Zoltán",             750000,     5,  "jakab"     ],
+            [1000000,   "Nagy István",              1500000,    5,  "nagypisti" ],
+            [5000000,   "Kamu ŐB",                  10000000,   5,  "ob"        ]
         ];
 
         var upgrades_data = [
@@ -421,6 +421,7 @@
                     loadFromInput($('#ld_data').val());
                 }
             });
+
             $('#sv_button').click(function () {
                 saveData();
             })
@@ -428,6 +429,7 @@
             $('#ld_cookie').click(function () {
                 loadFromCookie();
             })
+
             $('#sv_cookie').click(function () {
                 saveDataToCookie();
             })
@@ -502,6 +504,7 @@
                 points_to_add = points_to_add + autos[i].getProduction();
                 $(selector + "_count").html(autos[i].getCount());
             }
+
             for (var i = 0; i < perks.length; i++){
                 var selector = "#" + perks[i].getHtmlId();
                 if(perks[i].isBought()){
@@ -532,6 +535,7 @@
                     $('#' + menus[i].getHtmlId()).css("display", "none");
                 }
             }
+
             for(var i = 0; i<upgrades.length; i++){
                 var selector = "#" + upgrades[i].getHtmlId();
                 if(upgrades[i].isBought()){
@@ -560,6 +564,7 @@
             $('#persecond').html(Math.round(points_to_add));
 
             default_player.addPoints(points_to_add / 30);
+
         }, 10);
     });
 }).call();
