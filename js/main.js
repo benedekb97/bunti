@@ -366,26 +366,26 @@
         //  total points, name                      cost        multiplier  html id
             [500,       "Törött kártya",            750,        5,  "broken"    ],
             [2000,      "Lejárt éjszakai kártya",   4000,       5,  "night"     ],
-            [10000,     "Letiltott kártya",         15000,      5,  "blocked"   ],
-            [25000,     "Talált kártya",            50000,      5,  "found"     ],
-            [100000,    "Kakas dolgozói",           150000,     5,  "kakas"     ],
-            [500000,    "Jakab Zoltán",             750000,     5,  "jakab"     ],
-            [1000000,   "Nagy István",              1500000,    5,  "nagypisti" ],
-            [5000000,   "Kamu ŐB",                  10000000,   5,  "ob"        ]
+            [10000,     "Letiltott kártya",         15000,      4,  "blocked"   ],
+            [25000,     "Talált kártya",            50000,      4,  "found"     ],
+            [100000,    "Kakas dolgozói",           150000,     3,  "kakas"     ],
+            [500000,    "Jakab Zoltán",             750000,     3,  "jakab"     ],
+            [1000000,   "Nagy István",              1500000,    2,  "nagypisti" ],
+            [5000000,   "Kamu ŐB",                  10000000,   2,  "ob"        ]
         ];
 
         var upgrades_data = [
             // name, unlocks_at, cost, html tag id, auto id, new pps for auto
             ["Narancs helyett pomelo",          1000,    240,       "pomelo",   0,  0.5,        "Pomelo"                ],
             ["Pomelo helyett torta",            2500,    1200,      "cake",     0,  2,          "Torta"                 ],
-            ["Gondnok helyett Cseszter",        25000,   6000,      "magdi",    1,  5,          "Cseszter"              ],
-            ["Cseszter helyett takkernéni",     50000,   12000,     "janitor",  1,  10,         "Takkernéni"            ],
-            ["Füvezés helyett pipázás",         100000,  20000,     "pipa",     2,  25,         "Szobában pipázás"      ],
-            ["Pipázás helyett fallyukasztás",   250000,  30000,     "lyuk",     2,  50,         "Fallyukasztás"         ],
-            ["Jegyzet helyett könyvek",         500000,  40000,     "konyv",    3,  300,        "Könyvégetés"           ],
-            ["Nevtanár helyett KB",             10000,   300000,    "kb",       4,  4000,       "KB felbaszása"         ],
-            ["Lift helyett szemétledobó",       10000,   2000000,   "trash",    5,  25000,      "Szemétledobóba szarás" ],
-            ["Kanapé helyett lift",             10000,   25000000,  "lift",     6,  1000000,    "Lift felgyújtása"      ],
+            ["Gondnok helyett Cseszter",        25000,   6000,      "magdi",    1,  3,          "Cseszter"              ],
+            ["Cseszter helyett takkernéni",     50000,   12000,     "janitor",  1,  5,         "Takkernéni"            ],
+            ["Füvezés helyett pipázás",         100000,  20000,     "pipa",     2,  20,         "Szobában pipázás"      ],
+            ["Pipázás helyett fallyukasztás",   250000,  30000,     "lyuk",     2,  35,         "Fallyukasztás"         ],
+            ["Jegyzet helyett könyvek",         500000,  40000,     "konyv",    3,  175,        "Könyvégetés"           ],
+            ["Nevtanár helyett KB",             10000,   300000,    "kb",       4,  1900,       "KB felbaszása"         ],
+            ["Lift helyett szemétledobó",       10000,   2000000,   "trash",    5,  12500,      "Szemétledobóba szarás" ],
+            ["Kanapé helyett lift",             10000,   25000000,  "lift",     6,  125000,    "Lift felgyújtása"      ],
             ["Szemétledobó helyett szellőző",   10000,   4000000,   "vent",     5,  50000,      "Szellőzőbe szarás"     ]
         ];
 
