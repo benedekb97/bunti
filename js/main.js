@@ -357,7 +357,7 @@
         ];
 
         var menu_data = [
-            ["Szarok", true, "autos"],
+            ["Kakik", true, "autos"],
             ["Perkek", false, "perks"],
             ["Fejlesztések", false, "upgrades"]
         ];
