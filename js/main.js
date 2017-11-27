@@ -346,10 +346,10 @@
 
         //Object data
         var object_data = [
-            [15, 120, 1500, 10000, 120000, 1500000, 20000000, 123456789], // initial cost
-            [0.2, 0.2, 0.22, 0.24, 0.26, 0.28, 0.25, 0.23], // cost increase factor
+            [15, 150, 1500, 14000, 125000, 1300000, 16000000, 250000000], // initial cost
+            [0.25, 0.25, 0.25, 0.24, 0.26, 0.26, 0.26, 0.25], // cost increase factor
             ["Narancs", "Gondnok", "Füvezés", "Jegyzet égetés", "Nevelőtanár", "Liftbe hányás", "Kanapé felgyújtása","Hajnalban sikítás"], // name
-            [0.2, 1, 10, 150, 2000, 12500, 500000, 3000000], // yield
+            [0.2, 1.8, 15, 120, 1100, 10000, 99999, 750000], // yield
             ["buy_bad_food", "buy_gondnok", "buy_weed", "buy_toilet", "buy_teacher" ,"buy_vomit", "buy_trash","buy_tuti"], // buy div id
             ["images/naranca.png", "images/gondnok.png", "images/weed-hi.png", "images/jegyzet.png", "images/filler.png" ,"images/filler.png", "images/filler.png", "images/tuti.png"], // icon path
             ["food_gif", "gondnok_gif", "weed_gif", "toilet_gif", "teacher_gif", "vomit_gif", "trash_gif","tuti_gif"], // gif tag id
