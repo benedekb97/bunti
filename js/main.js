@@ -1,4 +1,24 @@
 (function(){
+    function diffForHumans(number) {
+        if(number>1000000000000000000000){
+            return Math.round(number/(1000000000000000000000) * 10000) / 10000 + " trilliárd";
+        }else if(number>1000000000000000000) {
+            return Math.round(number/1000000000000000000 * 1000) / 1000 + " trillió";
+        }else if(number>1000000000000000) {
+            return Math.round(number/1000000000000000 * 1000) / 1000 + " billiárd";
+        }else if(number>1000000000000) {
+            return Math.round(number/1000000000000 * 1000) / 1000 + " billió";
+        }else if(number>1000000000) {
+            return Math.round(number/(1000000000) * 100) / 100 + " milliárd";
+        }else if(number>1000000) {
+            return Math.round(number/1000000 * 100) / 100 + " millió";
+        }else if(number>1000) {
+            return Math.round(number/1000 * 100) / 100 + " ezer";
+        }else{
+            return number;
+        }
+    }
+
     function Player() {
         var points = 0;
         var total_points = 0;
@@ -529,7 +549,7 @@
                 }
                 if(upgrades[i].canBuy()){
                     $(selector).css("display","block");
-                    $(selector).html(upgrades[i].getName() + " - " + upgrades[i].getCost());
+                    $(selector).html(upgrades[i].getName() + " - " + diffForHumans(upgrades[i].getCost()));
                 }else{
                     $(selector).css("display","none");
                 }
@@ -538,9 +558,9 @@
                 }
             }
 
-            $('#points').html(Math.round(default_player.getPoints()));
+            $('#points').html(diffForHumans(Math.round(default_player.getPoints())));
 
-            $('#persecond').html(Math.round(points_to_add));
+            $('#persecond').html(diffForHumans(Math.round(points_to_add)));
 
             default_player.addPoints(points_to_add / 30);
 
