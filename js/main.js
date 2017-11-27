@@ -491,7 +491,7 @@
                     $(selector).css("color", "rgba(0,0,0,0.5)");
                 }
                 if(default_player.getTotalPoints()>=autos[i].getUnlocksAt()) {
-                    $(selector).html("<img src=" + autos[i].getIconImg() + " height='20' width='20'> " + autos[i].getName() + " - " + Math.round(autos[i].getCost()));
+                    $(selector).html("<img src=" + autos[i].getIconImg() + " height='20' width='20'> " + autos[i].getName() + " - " + diffForHumans(Math.round(autos[i].getCost())));
                 }else{
                     $(selector).html("<img src='images/filler.png' height='20' width='20'> ??? - ???");
                 }
@@ -517,7 +517,7 @@
                     $(selector).css("color", "rgba(0,0,0,0.5)");
                 }
                 if(perks[i].canBuy()){
-                    $('#' + perks[i].getHtmlId()).html(perks[i].getName() + " - " + perks[i].getCost());
+                    $('#' + perks[i].getHtmlId()).html(perks[i].getName() + " - " + diffForHumans(perks[i].getCost()));
                 }else if(perks[i].isUnlocked()){
                     $('#' + perks[i].getHtmlId()).html(perks[i].getName() + " - ???");
                 }else{
